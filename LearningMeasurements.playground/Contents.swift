@@ -1,5 +1,7 @@
 //: Playground - noun: a place where people can play
 
-import UIKit
+import Foundation
 
-var str = "Hello, playground"
+// 1. Creating a measurement.
+let milk = Measurement(value: 1, unit: UnitVolume.imperialPints)
+milk.converted(to: .liters)
