@@ -14,3 +14,10 @@ let meters = Measurement(value: 5000, unit: UnitLength.meters)
 kms == meters
 kms + meters
 
+// 3. Formatters
+let newcastleToLondon = Measurement(value: 248, unit: UnitLength.miles)
+let formatter = MeasurementFormatter()
+formatter.locale = Locale(identifier: "fr")
+formatter.string(from: newcastleToLondon) // Prints 399,166 km
+formatter.locale = Locale(identifier: "en_GB")
+formatter.string(from: newcastleToLondon) // Prints 248 mi
